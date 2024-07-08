@@ -13,19 +13,4 @@ setInterval(() => {
 heroPics[currentPic].classList.add('active');
 heroTexts[currentPic].classList.add('active');
 
-// function nextImage() {
-//     heroPics[currentPic].classList.remove('active');
-//     heroTexts[currentPic].classList.remove('active');
-//     currentPic = (currentPic + 1) % heroPics.length;
-//     heroPics[currentPic].classList.add('active');
-//     heroTexts[currentPic].classList.add('active');
-// }
-
-// function prevImage() {
-//     heroPics[currentPic].classList.remove('active');
-//     heroTexts[currentPic].classList.remove('active');
-//     currentPic = (currentPic - 1 + heroPics.length) % heroPics.length;
-//     heroPics[currentPic].classList.add('active');
-//     heroTexts[currentPic].classList.add('active');
-// }
 
