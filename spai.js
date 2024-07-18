@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const observerOptions = {
         root: null, // Use the viewport as the container
         rootMargin: '0px',
-        threshold: 0.5 // Trigger when 10% of the element is visible
+        threshold: 0.2 // Trigger when 10% of the element is visible
     };
 
     function handleIntersection(entries, observer) {
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const observerOptions = {
         root: null, // Use the viewport as the container
         rootMargin: '0px',
-        threshold: 0.8 // Trigger when 10% of the element is visible
+        threshold: 0.2 // Trigger when 10% of the element is visible
     };
 
     function handleIntersection(entries, observer) {
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const observerOptions = {
         root: null, // Use the viewport as the container
         rootMargin: '0px',
-        threshold: 0.5 // Trigger when 10% of the element is visible
+        threshold: 0.2 // Trigger when 10% of the element is visible
     };
 
     function handleIntersection(entries, observer) {
