@@ -6,11 +6,11 @@ body {
 header {
   background-color: white;
   padding: 10px 20px;
-  height: auto; /* Allow height to adjust automatically */
+  height: auto;
 }
 
 .hrline {
-  width: 100%; /* Make hrline responsive */
+  width: 100%;
   height: 0;
   border: 1px solid rgba(218, 218, 218, 1);
 }
@@ -19,36 +19,31 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap;
 }
 
 .logo {
   width: 63.41px;
   height: 77px;
-  top: 28.39px;
-  left: 44.68px;
-  gap: 0px;
-  opacity: 0px;
-
 }
 
 .company-name {
-  width: 225px;
+  margin: 10px;
+  width: 250px;
   height: 60px;
-  left: 100.34px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 20px;
   text-transform: uppercase;
   color: #000000;
-  margin-left: 10px; /* Adjust margin for spacing */
+  
 }
 
 .contact-info {
   display: flex;
   align-items: center;
   gap: 50px;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap;
 }
 
 .contact-info span {
@@ -64,7 +59,25 @@ header {
   font-family: "Poppins", sans-serif;
   border-radius: 8px;
   margin-right: 50px;
-  /* margin: 10px; Adjust margin for spacing */
+}
+.login-button1{
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  border-radius: 8px;
+  margin-right: 50px;
+  display: none;
+}
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon img {
+  width: 30px;
+  height: 30px;
 }
 
 nav {
@@ -78,8 +91,8 @@ nav {
   list-style: none;
   padding: 0;
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  gap: 20px; /* Adjust gap for spacing */
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .navbar li {
@@ -121,12 +134,12 @@ nav {
   border-radius: 8px;
   background: rgba(244, 244, 244, 1);
   border: 1px solid #ccc;
-  padding-right: 40px; /* Add padding to the right for the button */
+  padding-right: 40px;
 }
 
 .search-button {
   position: absolute;
-  right: 10px; /* Position the button inside the input field */
+  right: 10px;
   background: none;
   border: none;
   padding: 0;
@@ -137,8 +150,8 @@ nav {
 }
 
 .search-button img {
-  width: 16px; /* Adjust as needed */
-  height: 16px; /* Adjust as needed */
+  width: 16px;
+  height: 16px;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -173,7 +186,6 @@ nav {
 .dropdown-menu a:hover {
   background: rgba(236, 236, 236, 1);
 }
-
 /*Hero***************************************************************/
 .hero {
   position: relative;
@@ -414,12 +426,13 @@ opacity: 1; /* Set opacity to fully visible */
   justify-content: center;
 }
 .news-containers{
-  margin-left: 100px;
+
   margin-top: 300px;
-  margin-right: 100px;
+  
   display: flex; /* Use flexbox */
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 6%;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 1s ease-out, transform 1s ease-out;
@@ -432,8 +445,7 @@ opacity: 1; /* Set opacity to fully visible */
   width: 325px;
   height: 366px;
   border-radius: 18px;
-  top: 1270.28px;
-  left: 106px;
+  margin: 15px;
   gap: 0px;
   border: 2px;
   opacity: 0px;
@@ -766,26 +778,53 @@ footer{
   
 }
 /*********************************************************/
+@media (max-width: 700px){
+  .menu-icon{
+    margin-left: 85%;
+  }
+  .login-button{
+    display: none;
+  }
+  .login-button1{
+    display: block;
+  }
+}
+
 @media (max-width: 768px) {
   /* Mobile devices */
-  header {
-      flex-direction: column;
-      align-items: center;
-  }
   .top-row {
-      flex-direction: column;
-      align-items: center;
-  }
-  .contact-info {
-      padding-left: 0;
-      justify-content: center;
-      gap: 10px;
-  }
-  .navbar {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-  }
+    justify-content: center;
+    gap: 13px;
+}
+.contact-info{
+  gap: 10px;
+  justify-content: center;
+}
+.sep{
+  display: flex;
+  
+}
+.menu-icon {
+    display: block;
+}
+.navbar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.navbar.active {
+    display: flex;
+}
+.nav-toggle {
+    display: block;
+}
+.news-title{
+  top: 800px;
+}
+.news-containers{
+  margin-top: 100px;
+}
   .news-container{
     flex-direction: column;
       align-items: center;
@@ -805,33 +844,27 @@ footer{
       display: none;
   }
 }
-@media (min-width: 1025px) {
-  /* Desktop devices */
-  .company-name{
-    position: absolute;
-  }
-  .nav{
-    justify-content: space-between;
-}
-.navbar{
-    gap: 70px;
-}
-.navbar li{
-    display: inline;
-    font-weight: 400;
-    height: 30px;
-    gap: 0px;
-    opacity: 1;
+@media (min-width: 1240px) {
+ /* Desktop devices 1024*/
 
+.nav {
+  justify-content: space-between;
 }
-.navbar a{
-    text-align: left;
-    font-weight: 400;
+.navbar {
+  gap: 70px;
 }
-.dropdown-menu{
-    width: 100%;
+.navbar li {
+  display: flex;
+  font-weight: 400;
+  height: 30px;
+}
+.navbar a {
+  text-align: left;
+  font-weight: 400;
+}
+.dropdown-menu {
+  width: 100%;
   height: 150.45px;
-  gap: 0px;
 }
 .math {
     width: 963.25px;
@@ -863,5 +896,4 @@ footer{
     align-items: center;
     justify-content: center;
   }
-
 }
