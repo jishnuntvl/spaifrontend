@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spai</title>
     <link rel="stylesheet" href="spai.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -59,7 +60,6 @@
             </ul>
         </nav>
     </header>
-    
     <div class="hero">
         <div class="hero-pic">
             <img class="full-width-img" src="images/swim.png" alt="Image 1">
@@ -116,14 +116,25 @@
     </div>
     <div class="math">
         <div class="math-text">
-            <div class="math-title">Athletes</div>
-            <div class="math-num">1900+</div>
-            <!-- <div class="math-title">Experts</div>
-            <div class="math-num">45+</div>
-            <div class="math-title">proffesionals</div>
-            <div class="math-num">35+</div>
-            <div class="math-title">LIFETIME MEMBERS</div>
-            <div class="math-num">700+</div> -->
+            <div style="display: flex;gap: 40px;">
+                <div style="justify-content: center;">
+                    <div class="math-title">Athletes</div>
+                    <div class="math-num">1900+</div>
+                </div>
+                <div>
+                    <div class="math-title">Experts</div>
+                    <div class="math-num">45+</div>
+                </div>
+                <div>
+                    <div class="math-title">proffesionals</div>
+                    <div class="math-num">35+</div>
+                </div>
+                <div>
+                    <div class="math-title">LIFETIME MEMBERS</div>
+                    <div class="math-num">700+</div>
+                </div>
+            </div>
+            
         </div>
         <span class="verti"></span>
         <span class="verti" style="right: 50%;"></span>
@@ -184,7 +195,7 @@
                 
             </div>
         </div>
-        <div style="justify-content: center;">
+        <div style="display: flex; justify-content: center;width: 100%;">
             <a style="text-decoration: none; color: inherit;" href="">
                 <div class="news-seemore">
                     <div class="seemoretext">
@@ -294,29 +305,34 @@
     </div>
     <footer>
         <div class="footer-row">
-            <img src="images/SPAI_LOGO.jpg" alt="Company Logo" class="logo-foot">
-            <span class="companyfoot-name">SPORTS PSYCHOLOGY ASSOSIATION OF INDIA</span>
-            <div class="quicklinks">
-                <ul style="list-style-type: none;">
-                    <li style="font-size: 14px;font-weight: 900;">Quick Links</li>
-                    <li><hr style="width: auto;" class="hrline"></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">News</a></li>
-                    <li><a href="">Gallery</a></li>
-                    <li><a href="">Contact Us</a></li>
-                </ul>
+            <div style="display: flex;width: 400px;">
+                <img src="images/SPAI_LOGO.jpg" alt="Company Logo" class="logo-foot">
+                <span class="companyfoot-name">SPORTS PSYCHOLOGY ASSOSIATION OF INDIA</span>
             </div>
-            <div style="left: 75%;" class="quicklinks">
-                <ul style="list-style-type: none;">
-                    <li style="font-size: 14px;font-weight: 900;">Contact Us</li>
-                    <li><hr style="width: auto;" class="hrline"></li>
-                    <li><span class="email"><img src="images/email.svg" alt="Email Icon"> spaionlineindia@gmail.com</span></li>
-                    <li><span class="phone"><img src="images/Vector.svg" alt="Phone Icon"> +91 9958 998 684</span></li>
-                    <li style="color: transparent;">.</li>
-                    <li style="color: transparent;">.</li>
-                    
-                </ul>
+            <div style="display: flex;">
+                <div class="quicklinks">
+                    <ul style="list-style-type: none;">
+                        <li style="font-size: 14px;font-weight: 900;">Quick Links</li>
+                        <li><hr style="width: auto;" class="hrline"></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Gallery</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div style="left: 75%;" class="quicklinks">
+                    <ul style="list-style-type: none;">
+                        <li style="font-size: 14px;font-weight: 900;">Contact Us</li>
+                        <li><hr style="width: auto;" class="hrline"></li>
+                        <li><span class="email"><img src="images/email.svg" alt="Email Icon"> spaionlineindia@gmail.com</span></li>
+                        <li><span class="phone"><img src="images/Vector.svg" alt="Phone Icon"> +91 9958 998 684</span></li>
+                        <li style="color: transparent;">.</li>
+                        <li style="color: transparent;">.</li>
+                        
+                    </ul>
+                </div>
             </div>
+            
         </div>
     </footer>
     <script type="text/javascript" src="spai.js"></script>

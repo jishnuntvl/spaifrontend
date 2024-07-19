@@ -66,8 +66,7 @@ header {
   padding: 10px 20px;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
-  border-radius: 8px;
-  margin-right: 50px;
+  border-radius: 8px; 
   display: none;
 }
 .menu-icon {
@@ -241,7 +240,7 @@ nav {
 
 .hero-text {
   display: none;
-  font-size: 50px;
+  font-size: 3.6%;
   margin-bottom: 20px;
   font-weight: 500; /* Increased font weight */
 }
@@ -254,10 +253,6 @@ nav {
 .welcome {
   width: 1136px;
   height: 267.44px;
-  top: 464.33px;
-  left: 152px;
-  gap: 0px;
-  opacity: 0px;
   font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-weight: 900;
@@ -365,17 +360,16 @@ opacity: 1; /* Set opacity to fully visible */
   display: flex;
 }
 .math-title{
-  width: 72px;
+  width: auto;
   height: 24px;
   margin-top: 30px;
-  margin-left: 80px;
   gap: 0px;
   opacity: 0px;
   font-family: "Poppins",sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 400px;
   line-height: 24px;
-  text-align: right;
+  text-align: center;
     
 }
 .math-num{
@@ -410,24 +404,20 @@ opacity: 1; /* Set opacity to fully visible */
 
 /*news and Eventsssss*************************************/
 .news-title {
+  justify-content: center;
+  margin-top: 10%;
   width: 100%;
-  height: auto;
-  top: 1000px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: "Poppins", sans-serif;
+  height: 48px;
+  align-items: center;
+  font-family: "Poppins",sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 48px;
   text-align: center;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .news-containers{
 
-  margin-top: 300px;
+  margin-top: 20px;
   
   display: flex; /* Use flexbox */
   flex-wrap: wrap;
@@ -537,7 +527,6 @@ font-weight:400;
   justify-content: center;
   width: 268.41px;
   height: 62.74px;
-  margin-left: 40%;
   margin-top: 20px;
   border: 2px 0px 0px 0px;
   opacity: 0px;
@@ -558,14 +547,14 @@ font-weight:400;
 /*Footer************************************/
 footer{
   width: 100%;
-  height: 183.15px;
+  height: auto;
   margin-top: 70px;
   background: rgba(248, 248, 248, 1);
 
 }
 .footer-row{
   display: flex;
-  align-items: center;
+  align-items:normal;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 50px;
@@ -580,23 +569,20 @@ footer{
 
 }
 
+
 .companyfoot-name {
-  margin-top: 20px;
-  position: absolute;
-  width: 225px;
+  margin: 30px;
+  width: 250px;
   height: 60px;
-  left: 120.34px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 20px;
   text-transform: uppercase;
   color: #000000;
-  margin-left: 10px; /* Adjust margin for spacing */
 }
 .quicklinks{
-  left: 55%;
-  position: absolute;
-  margin-top: 80px;
+  margin-right: 10px;
+  margin-top: 10px;
   flex-direction: column;
   align-items: center;
   gap: 10px;
@@ -620,10 +606,11 @@ footer{
 
 /*Asoociate**********************/
 .associate-title{
-  margin-top: 70px;
-  width: 378px;
+  justify-content: center;
+  margin-top: 5%;
+  width: 100%;
   height: 48px;
-  margin-left: 37.5%;
+  align-items: center;
   font-family: "Poppins",sans-serif;
   font-size: 32px;
   font-weight: 700;
@@ -632,11 +619,11 @@ footer{
 
 }
 .associate-containers{
-  margin-left: 300px;
+  flex-wrap: wrap;
   margin-top: 40px;
-  margin-right: 300px;
   display: flex; /* Use flexbox */
-  justify-content: space-between;
+  justify-content: center;
+  gap: 6%;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 1s ease-out, transform 1s ease-out;
@@ -645,7 +632,9 @@ footer{
   opacity: 1;
   transform: translateY(0);
 }
+
 .associate-container{
+  margin: 15px;
   background: rgba(248, 248, 248, 1);
   width: 240px;
   height: 151.09px;
@@ -667,6 +656,7 @@ footer{
 /*About.......................................*/
 
 .about-content{
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
@@ -713,14 +703,22 @@ footer{
 /*executie************************************************/
 
 .executie-containers{
-  margin-left: 150px;
+  flex-wrap: wrap;
   margin-top: 40px;
-  margin-right: 150px;
   display: flex; /* Use flexbox */
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2%;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
   
 }
+.executie-containers.visible{
+  opacity: 1;
+  transform: translateY(0);
+}
 .executie-container{
+  margin: 15px;
   width: 254px;
   height: 348px;
   gap: 0px;
@@ -778,7 +776,15 @@ footer{
   
 }
 /*********************************************************/
+@media (max-width: 498px){
+  .sep{
+    margin-left: 80%;
+  }
+}
 @media (max-width: 700px){
+  .about-text{
+    width: 80%;
+  }
   .menu-icon{
     margin-left: 85%;
   }
@@ -794,6 +800,10 @@ footer{
   /* Mobile devices */
   .top-row {
     justify-content: center;
+    gap: 13px;
+}
+.footer-row{
+  justify-content: center;
     gap: 13px;
 }
 .contact-info{
@@ -820,10 +830,10 @@ footer{
     display: block;
 }
 .news-title{
-  top: 800px;
+  margin-top: 20px;
 }
 .news-containers{
-  margin-top: 100px;
+  margin-top: 20px;
 }
   .news-container{
     flex-direction: column;
@@ -842,6 +852,11 @@ footer{
   }
   .math {
       display: none;
+  }
+}
+@media (max-width: 1240px) {
+  .math{
+    display: none;
   }
 }
 @media (min-width: 1240px) {
@@ -879,21 +894,5 @@ footer{
   
     z-index: 2;
   }
-  .news-title {
-    width: 255px;
-    height: 48px;
-    top: 1000px; /* Adjust as needed */
-    left: 50%; /* Center horizontally within its container */
-    transform: translateX(-50%); /* Center horizontally */
-    opacity: 1; /* Change to 1 to make it visible */
-    font-family: "Poppins", sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 48px; /* Ensures the text is vertically centered */
-    text-align: center;
-    position: absolute; /* or relative, depending on your needs */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
 }
