@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spai</title>
+    <link rel="stylesheet" href="web/header.css">
+    <link rel="stylesheet" href="web/footer.css">
+    <link rel="stylesheet" href="web/news.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="top-row">
+            <div style="display: flex;">
+                <img src="images/SPAI_LOGO.jpg" alt="Company Logo" class="logo">
+                <span class="company-name">SPORTS PSYCHOLOGY ASSOCIATION OF INDIA</span>
+            </div>
+            
+            <div class="contact-info">
+                <span class="phone"><img src="images/Vector.svg" alt="Phone Icon"> +91 9958 998 684</span>
+                <span class="email"><img src="images/email.svg" alt="Email Icon"> spaionlineindia@gmail.com</span>
+            </div>
+            <div class="sep">
+                <div class="login-button">Member Login</div>
+            <div class="menu-icon">
+                <img src="images/menu.svg" alt="Menu Icon">
+            </div>
+            </div>
+            
+        </div>
+        <hr class="hrline">
+        <nav>
+            <ul class="navbar">
+                <li><a href="history.html">About</a></li>
+                <li><a href="#">Members & Membership</a></li>
+                <li><a href="#">Publications</a></li>
+                <li class="dropdown">
+                    <a href="#">News & Events</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Event 1</a></li>
+                        <li><a href="#">Events 2</a></li>
+                        <li><a href="#">Event 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li>
+                    <div class="search-wrapper">
+                        <input type="text" class="search-input" placeholder="search here...">
+                        <button class="search-button">
+                            <img src="images/search.svg" alt="Search">
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <div class="login-button1">Member Login</div>
+                </li>                
+            </ul>
+        </nav>
+    </header>
+    <div class="news">
+        <div class="news-title">
+            <!-- <img class="bg-running" src="images/running-2-bg.png" alt=""> -->
+            <p>News & Events</p>
+        </div>
+        <div class="news-containers">
+            <div class="news-container">
+                <div class="news-img">
+                    <img src="images/news1.png" alt="">
+                </div>
+                <div class="news-dis">
+                    2 Days Ago
+                </div>
+                <div class="news-head">
+                    GOOD REASONS TEENAGERS SHOULD PLAY SPORTS
+                </div>
+                <div class="news-read">
+                    <p>Read</p>
+                    <img src="images/arrowread.svg" alt="">
+                </div>
+                
+            </div>
+            <div class="news-container">
+                <div class="news-img">
+                    <img src="images/news2.png" alt="">
+                </div>
+                <div class="news-dis">
+                    2 Days Ago
+                </div>
+                <div class="news-head">
+                    GOOD REASONS TEENAGERS SHOULD PLAY SPORTS
+                </div>
+                <div class="news-read">
+                    <p>Read</p>
+                    <img src="images/arrowread.svg" alt="">
+                </div>
+                
+            </div>
+            <div class="news-container">
+                <div class="news-img">
+                    <img src="images/news2.png" alt="">
+                </div>
+                <div class="news-dis">
+                    2 Days Ago
+                </div>
+                <div class="news-head">
+                    GOOD REASONS TEENAGERS SHOULD PLAY SPORTS
+                </div>
+                <div class="news-read">
+                    <p>Read</p>
+                    <img src="images/arrowread.svg" alt="">
+                </div>
+                
+            </div>
+            <div class="news-container">
+                <div class="news-img">
+                    <img src="images/news3.png" alt="">
+                </div>
+                <div class="news-dis">
+                    2 Days Ago
+                </div>
+                <div class="news-head">
+                    GOOD REASONS TEENAGERS SHOULD PLAY SPORTS
+                </div>
+                <div class="news-read">
+                    <p>Read</p>
+                    <img src="images/arrowread.svg" alt="">
+                </div>
+                
+            </div>
+            <div class="news-container">
+                <div class="news-img">
+                    <img src="images/news1.png" alt="">
+                </div>
+                <div class="news-dis">
+                    2 Days Ago
+                </div>
+                <div class="news-head">
+                    GOOD REASONS TEENAGERS SHOULD PLAY SPORTS
+                </div>
+                <div class="news-read">
+                    <p>Read</p>
+                    <img src="images/arrowread.svg" alt="">
+                </div>
+                
+            </div>
+            <div class="news-container">
+                <div class="news-img">
+                    <img src="images/news3.png" alt="">
+                </div>
+                <div class="news-dis">
+                    2 Days Ago
+                </div>
+                <div class="news-head">
+                    GOOD REASONS TEENAGERS SHOULD PLAY SPORTS
+                </div>
+                <div class="news-read">
+                    <p>Read</p>
+                    <img src="images/arrowread.svg" alt="">
+                </div>
+                
+            </div>
+            <div class="news-container">
+                <div class="news-img">
+                    <img src="images/news3.png" alt="">
+                </div>
+                <div class="news-dis">
+                    2 Days Ago
+                </div>
+                <div class="news-head">
+                    GOOD REASONS TEENAGERS SHOULD PLAY SPORTS
+                </div>
+                <div class="news-read">
+                    <p>Read</p>
+                    <img src="images/arrowread.svg" alt="">
+                </div>
+                
+            </div>
+            <div class="news-container">
+                <div class="news-img">
+                    <img src="images/news3.png" alt="">
+                </div>
+                <div class="news-dis">
+                    2 Days Ago
+                </div>
+                <div class="news-head">
+                    GOOD REASONS TEENAGERS SHOULD PLAY SPORTS
+                </div>
+                <div class="news-read">
+                    <p>Read</p>
+                    <img src="images/arrowread.svg" alt="">
+                </div>
+                
+            </div>
+            <div class="news-container">
+                <div class="news-img">
+                    <img src="images/news3.png" alt="">
+                </div>
+                <div class="news-dis">
+                    2 Days Ago
+                </div>
+                <div class="news-head">
+                    GOOD REASONS TEENAGERS SHOULD PLAY SPORTS
+                </div>
+                <div class="news-read">
+                    <p>Read</p>
+                    <img src="images/arrowread.svg" alt="">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-row">
+            <div style="display: flex;width: 400px;">
+                <img src="images/SPAI_LOGO.jpg" alt="Company Logo" class="logo-foot">
+                <span class="companyfoot-name">SPORTS PSYCHOLOGY ASSOSIATION OF INDIA</span>
+            </div>
+            <div style="display: flex;">
+                <div class="quicklinks">
+                    <ul style="list-style-type: none;">
+                        <li style="font-size: 14px;font-weight: 900;">Quick Links</li>
+                        <li><hr style="width: auto;" class="hrline"></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Gallery</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div style="left: 75%;" class="quicklinks">
+                    <ul style="list-style-type: none;">
+                        <li style="font-size: 14px;font-weight: 900;">Contact Us</li>
+                        <li><hr style="width: auto;" class="hrline"></li>
+                        <li><span class="email"><img src="images/email.svg" alt="Email Icon"> spaionlineindia@gmail.com</span></li>
+                        <li><span class="phone"><img src="images/Vector.svg" alt="Phone Icon"> +91 9958 998 684</span></li>
+                        <li style="color: transparent;">.</li>
+                        <li style="color: transparent;">.</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+    <script type="text/javascript" src="spai.js"></script>
+</body>
+</html>
+
+.news-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+    z-index: 1;
+  }
+  .news-title p{
+    font-family: "Poppins",sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+  }
+  .bg-running{
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 120px;
+    left: 0px;
+    gap: 0px;
+    opacity: 0.7;
+    z-index: 0; /* Ensures image is behind the text */
+  
+  
+  }
+  .news{
+    height: auto;
+  }
+  .news-containers{
+    height: auto;
+    grid-auto-rows: auto; /* This line makes the row height automatic */
+  min-height: 100vh;
+    margin: 20px 25% 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-grow: 1;
+    grid-template-rows: repeat(3,1fr); 
+
+  }
+  .news-container{
+    width: 325px;
+    height: 366px;
+    border-radius: 18px;
+    margin: 15px;
+    gap: 0px;
+    border: 2px;
+    border: 2px solid #909090
+  
+  }
+  .news-img img{
+    width: 314px;
+    height: 196px;
+    border-radius: 18px;
+    margin: 5px;
+  
+  
+  }
+  .news-head{
+    width: 267px;
+    height: 48px;
+    margin-left: 10%;
+  margin-right: 5px;
+  margin-top: 5px;
+    gap: 0px;
+    font-family: "Poppins",sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+  
+  }
+  .news-dis{
+    width: 292.2px;
+    height: 18px;
+    top: 1489px;
+    left: 932px;
+    gap: 0px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+  gap: 0px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  
+  font-family:"Poppins",sans-serif;
+  font-weight:400;
+  }
+  .news-read{
+    display: flex;
+    width: 130px;
+    height: 46px;
+    border-radius: 61px;
+    border: 1px solid black;
+    margin-left: 10%;
+    margin-top: 10px;
+    justify-content: space-between;
+    
+  }
+  .news-read p{
+    width: 42px;
+    height: 24px;
+    font-family: "Poppins",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    margin-left: 20%;
+    margin-top: 7%;
+  
+    
+  }
+  .news-read img{
+    width: 8.19px;
+    height: 8.19px;
+    margin-top: 13%;
+    margin-right: 20%;
+    color: #000000;
+  
+  }
+  @media (max-width: 1130px){
+    .news-containers{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5,1fr);   
+      }
+  }
+  @media (max-width: 768px) {
+    .news-containers{
+        gap: 2%;
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(9,1fr);  
+      }
+  .news-title{
+    margin-top: 20px;
+  }
+    .news-container{
+      flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+  }
