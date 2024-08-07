@@ -1,13 +1,25 @@
+a{
+    text-decoration: none; 
+    color: inherit;
+  }
 table {
-    width: 1000px;
-    margin: 20px;
+    width: 1052px;
+    margin-left: 180px;
     border-radius: 17px;
     border-collapse: separate;
     border-spacing: 0;
     border: 1px solid rgba(225, 225, 225, 1);
     overflow: hidden; /* Ensure border radius is applied correctly */
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;  
 }
+tbody{
+    color: rgba(77, 77, 77, 1);
 
+}
 thead {
     background-color: red;
 }
@@ -41,4 +53,36 @@ tr:last-child td:first-child {
 
 tr:last-child td:last-child {
     border-bottom-right-radius: 17px; /* Rounded corner for bottom-right cell */
+}
+td img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.username{
+    display: flex;
+    align-items: center;
+}
+.view{
+    width: 72px;
+    height: 26px;
+    background: rgba(239, 239, 239, 1);
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+.view img{
+    width: 15px;
+    height: 10px; 
+    margin-left: 5px;
+    
+}
+.view p{
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
+    margin-left: 1px;     
 }

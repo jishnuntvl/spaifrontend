@@ -236,7 +236,9 @@ font-weight:400;
 .news-add{
   top:45%;
 }
-
+.bg-running{
+  width: 60%;
+}
 .news-title{
   margin-top: 20px;
 }
@@ -252,4 +254,10 @@ font-weight:400;
   top:90%;
   right: 2%;
 }
+}
+@media (max-width: 408px){
+  .bg-running{
+
+    display: none;
+  } 
 }
