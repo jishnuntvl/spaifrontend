@@ -3,7 +3,7 @@ a{
     color: inherit;
   }
 table {
-    width: 1052px;
+    /* width: 1052px; */
     margin-left: 10%;
     margin-right: 10%;
     border-radius: 17px;
@@ -202,4 +202,19 @@ td img{
     line-height: 30px;
     text-align: center;
     color: rgba(255, 255, 255, 1); 
+  }
+  @media (max-width: 590px){
+    .status{
+        display: none;
+    }
+  }
+  @media (max-width: 520px){
+    .email{
+        display: none;
+    }
+  }
+  @media (min-width: 1240px) and (max-width: 1310px){
+    .navbar{
+        height: 30px;
+    }
   }
