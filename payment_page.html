@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spai</title>
+    <link rel="stylesheet" href="web/header.css">
+    <link rel="stylesheet" href="web/footer.css">
+    <link rel="stylesheet" href="web/payment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="top-row">
+            <div style="display: flex;">
+                <img src="images/SPAI_LOGO.jpg" alt="Company Logo" class="logo">
+                <span class="company-name">SPORTS PSYCHOLOGY ASSOCIATION OF INDIA</span>
+            </div>
+            
+            <div class="contact-info">
+                <span class="phone"><img src="images/Vector.svg" alt="Phone Icon"> +91 9958 998 684</span>
+                <span class="email"><img src="images/email.svg" alt="Email Icon"> spaionlineindia@gmail.com</span>
+            </div>
+            <div class="sep">
+                <div class="login-button">Member Login</div>
+            <div class="menu-icon">
+                <img src="images/menu.svg" alt="Menu Icon">
+            </div>
+            </div>
+            
+        </div>
+        <hr class="hrline">
+        <nav>
+            <ul class="navbar">
+                <li><a href="history.html">About</a></li>
+                <li><a href="#">Members & Membership</a></li>
+                <li><a href="#">Publications</a></li>
+                <li class="dropdown">
+                    <a href="news.html">News & Events</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Event 1</a></li>
+                        <li><a href="#">Events 2</a></li>
+                        <li><a href="#">Event 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li>
+                    <div class="search-wrapper">
+                        <input type="text" class="search-input" placeholder="search here...">
+                        <button class="search-button">
+                            <img src="images/search.svg" alt="Search">
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <div class="login-button1">Member Login</div>
+                </li>                
+            </ul>
+        </nav>
+    </header>
+    <div class="heading">
+        <div class="text">
+            Payment Method
+        </div>
+    </div>
+    <div class="news-tabs">
+        <ul class="tab-list">
+            <li class="tab-item active" data-tab="all">QR Code</li>
+            <li class="tab-item" data-tab="upcoming">Bank</li>
+
+        </ul>
+    </div>
+    
+    <div class="tab-content">
+        <div class="tab-panel active" id="all">
+            <!-- All news content -->
+            <div class="container">
+                <div class="qr-code">
+                    <img src="images/qr.png" alt="QR Code">
+                </div>
+                <div class="details">
+                    <label for="ref-id"><strong>Reference ID:</strong></label>
+                    <input type="text" id="ref-id" name="ref-id" placeholder="Enter Reference ID">
+                    
+                    <label for="bank-name"><strong>Bank Name:</strong></label>
+                    <input type="text" id="bank-name" name="bank-name" placeholder="Enter Bank Name">
+                </div>
+                <div style="display: flex; justify-content: center;width: 100%;">
+                    <a style="text-decoration: none; color: inherit;" href="">
+                        <div class="news-seemore">
+                            <div class="seemoretext">
+                                Submit
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <!-- Add more news items here -->
+        </div>
+        <div class="tab-panel" id="upcoming">
+            <!-- Upcoming news content -->
+            <div class="container">
+                <!-- <div class="qr-code">
+                    <img src="images/qr.png" alt="QR Code">
+                </div> -->
+                <div class="details">
+                    <label for="ref-id"><strong>Account No:</strong></label>
+                    <label for="ref-id"><strong>2987 9807 7664 8689</strong></label><br>
+                    <!-- <input type="text" id="ref-id" name="ref-id" placeholder="Enter Reference ID"> -->
+                    
+                    <label for="bank-name"><strong>IFCS: SBI00986s</strong></label><br>
+                    <!-- <input type="text" id="bank-name" name="bank-name" placeholder="Enter Bank Name"> -->
+
+                    <label for="ref-id"><strong>Reference ID:</strong></label>
+                    <input type="text" id="ref-id" name="ref-id" placeholder="Enter Reference ID">
+                    
+                    <label for="bank-name"><strong>Bank Name:</strong></label>
+                    <input type="text" id="bank-name" name="bank-name" placeholder="Enter Bank Name">
+                </div>
+                <div style="display: flex; justify-content: center;width: 100%;">
+                    <a style="text-decoration: none; color: inherit;" href="">
+                        <div class="news-seemore">
+                            <div class="seemoretext">
+                                Submit
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <!-- Add more news items here -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-row">
+            <div style="display: flex;width: 400px;">
+                <img src="images/SPAI_LOGO.jpg" alt="Company Logo" class="logo-foot">
+                <span class="companyfoot-name">SPORTS PSYCHOLOGY ASSOSIATION OF INDIA</span>
+            </div>
+            <div style="display: flex;">
+                <div class="quicklinks">
+                    <ul style="list-style-type: none;">
+                        <li style="font-size: 14px;font-weight: 900;">Quick Links</li>
+                        <li><hr style="width: auto;" class="hrline"></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Gallery</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div style="left: 75%;" class="quicklinks">
+                    <ul style="list-style-type: none;">
+                        <li style="font-size: 14px;font-weight: 900;">Contact Us</li>
+                        <li><hr style="width: auto;" class="hrline"></li>
+                        <li><span class="email"><img src="images/email.svg" alt="Email Icon"> spaionlineindia@gmail.com</span></li>
+                        <li><span class="phone"><img src="images/Vector.svg" alt="Phone Icon"> +91 9958 998 684</span></li>
+                        <li style="color: transparent;">.</li>
+                        <li style="color: transparent;">.</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.menu-icon').addEventListener('click', function() {
+                document.querySelector('.navbar').classList.toggle('active');
+            });
+        });
+        document.querySelectorAll('.tab-item').forEach(item => {
+    item.addEventListener('click', function() {
+        // Remove active class from all tabs
+        document.querySelectorAll('.tab-item').forEach(tab => tab.classList.remove('active'));
+        // Add active class to the clicked tab
+        this.classList.add('active');
+
+        // Hide all tab panels
+        document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+        // Show the selected tab panel
+        const targetPanel = document.getElementById(this.dataset.tab);
+        targetPanel.classList.add('active');
+    });
+});
+
+    </script>
+</body>
+</html>
