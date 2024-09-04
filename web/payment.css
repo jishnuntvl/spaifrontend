@@ -112,6 +112,7 @@
     text-align: center;
     color: rgba(255, 255, 255, 1); 
   }
+  
 @media (max-width: 520px) {
     .container{
         width: 350px;
