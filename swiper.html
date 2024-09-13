@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Add SwiperJS styles -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Add SwiperJS script -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+        
+        html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.swiper-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden; /* Contain the images inside the swiper */
+}
+
+.news-img img {
+  width: 100%; /* Make images responsive to the container */
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  object-fit: cover; /* Ensures the image doesn't stretch */
+}
+
+        a{
+  text-decoration: none; 
+  color: inherit;
+}
+.news-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  z-index: 1;
+}
+.news-title p{
+  font-family: "Poppins",sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+}
+.bg-running{
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 120px;
+  left: 0px;
+  gap: 0px;
+  opacity: 0.7;
+  z-index: 0; 
+
+
+}
+.news-add{
+  padding: 8px 20px 8px;
+  
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 90%;
+  right: 10%;
+  gap: 0px;
+  border-radius: 61px;
+  background: rgb(26, 231, 7);
+  font-family: "Poppins",sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 15px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+
+}
+.news-containers{
+  z-index: 1;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+}
+
+.news-container{
+  width: 325px;
+  height: 366px;
+  border-radius: 18px;
+  margin: 30px;
+  gap: 0px;
+  z-index: 2;
+  opacity: 0px; 
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+}
+.news-container:hover {
+  transform: scale(1.02); /* Zoom in by 10% */
+}
+
+.news-img{
+  position: relative;
+  z-index: 0;
+}
+.news-new{
+  padding: 8px 20px 8px;
+  opacity: 1;
+  z-index: 1;
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 15px;
+  left: 20px;
+  gap: 0px;
+  border-radius: 61px;
+  background: rgba(52, 127, 235, 1);
+  font-family: "Poppins",sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 15px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+
+}
+.news-delete{
+  opacity: 1;
+  z-index: 1;
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 15px;
+  right: 20px;
+  gap: 0px;
+
+}
+.news-delete img{
+  width:30px;
+  height: auto;
+}
+
+.news-head{
+  width: 267px;
+  height: 48px;
+  margin-left: 10%;
+margin-right: 5px;
+margin-top: 5px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: "Poppins",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+
+}
+.news-dis{
+  width: 292.2px;
+  height: 18px;
+  top: 1489px;
+  left: 932px;
+  gap: 0px;
+  opacity: 0px;
+  
+
+
+margin-left: 10%;
+margin-right: 10%;
+margin-top: 2%;
+gap: 0px;
+opacity: 0px;
+
+font-size: 12px;
+font-weight: 400;
+line-height: 18px;
+text-align: left;
+
+font-family:"Poppins",sans-serif;
+font-weight:400;
+}
+.news-read{
+  display: flex;
+  width: 130px;
+  height: 46px;
+  border-radius: 61px;
+  border: 1px solid black;
+  opacity: 0px;
+  margin-left: 10%;
+  margin-top: 10px;
+  justify-content: space-between;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  
+}
+.news-read:hover{
+  background-color: #000000;
+  color: white;
+}
+.news-read p{
+  width: 42px;
+  height: 24px;
+  font-family: "Poppins",sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 20%;
+  margin-top: 7%;
+
+  
+}
+.news-read img{
+  width: 8.19px;
+  height: 8.19px;
+  margin-top: 13%;
+  margin-right: 20%;
+
+}
+.default-image{
+  display: block;
+}
+.hover-image{
+  display: none;
+}
+
+.news-read:hover .hover-image {
+  display: block;
+}
+
+.news-read:hover .default-image {
+  display: none;
+}
+.news-seemore{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+  border: 2px 0px 0px 0px;
+  opacity: 0px;
+  background: rgba(0, 0, 0, 1);
+  border: 2px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.seemoretext{
+  opacity: 1;
+  font-family: "Poppins",sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1); 
+}
+@media (max-width: 768px) {
+.news-add{
+  top:45%;
+}
+.bg-running{
+  width: 60%;
+}
+.news-title{
+  margin-top: 20px;
+}
+.news-containers{
+  margin-top: 20px;
+}
+  .news-container{
+    flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+.news-add{
+  top:90%;
+  right: 2%;
+}
+}
+@media (max-width: 408px){
+  .bg-running{
+
+    display: none;
+  } 
+}
+    </style>
+</head>
+<body>
+    <div class="news">
+        <div class="news-title">
+            News & Events
+        </div>
+        <div class="news-containers">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="news-container">
+                            <div class="news-img">
+                                <img src="images/news1.png" alt="">
+                            </div>
+                            <div class="news-dis">
+                                2 Days Ago
+                            </div>
+                            <div class="news-head">
+                                GOOD REASONS TEENAGERS SHOULD PLAY SPORTS
+                            </div>
+                            <div class="news-read">
+                                <p>Read</p>
+                                <img src="images/arrowread.svg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="news-container">
+                            <div class="news-img">
+                                <img src="images/news2.png" alt="">
+                            </div>
+                            <div class="news-dis">
+                                2 Days Ago
+                            </div>
+                            <div class="news-head">
+                                GOOD REASONS TEENAGERS SHOULD PLAY SPORTS
+                            </div>
+                            <div class="news-read">
+                                <p>Read</p>
+                                <img src="images/arrowread.svg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="news-container">
+                            <div class="news-img">
+                                <img src="images/news2.png" alt="">
+                            </div>
+                            <div class="news-dis">
+                                2 Days Ago
+                            </div>
+                            <div class="news-head">
+                                GOOD REASONS TEENAGERS SHOULD PLAY SPORTS
+                            </div>
+                            <div class="news-read">
+                                <p>Read</p>
+                                <img src="images/arrowread.svg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="news-container">
+                            <div class="news-img">
+                                <img src="images/news2.png" alt="">
+                            </div>
+                            <div class="news-dis">
+                                2 Days Ago
+                            </div>
+                            <div class="news-head">
+                                GOOD REASONS TEENAGERS SHOULD PLAY SPORTS
+                            </div>
+                            <div class="news-read">
+                                <p>Read</p>
+                                <img src="images/arrowread.svg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="news-container">
+                            <div class="news-img">
+                                <img src="images/news3.png" alt="">
+                            </div>
+                            <div class="news-dis">
+                                2 Days Ago
+                            </div>
+                            <div class="news-head">
+                                GOOD REASONS TEENAGERS SHOULD PLAY SPORTS
+                            </div>
+                            <div class="news-read">
+                                <p>Read</p>
+                                <img src="images/arrowread.svg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+            </div>
+            
+            
+            
+        </div>
+        
+    </div>
+    <script>
+      const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+                768: {
+                slidesPerView: 2, // 2 slides on tablets
+                
+                },
+                1170: {
+                slidesPerView: 3.2, // 3 slides on desktops
+                
+                },
+            },
+  
+  touchEventsTarget: 'container', // Ensures touch events are captured by the swiper container
+  simulateTouch: true, // Enable touch interactions
+  watchOverflow: true, // Disable when there are fewer slides than needed
+  loop:true
+});
+
+    </script>
+    
+    
+</body>
+</html>
