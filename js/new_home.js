@@ -152,3 +152,31 @@ document.querySelector('.menu-icon').addEventListener('click', function() {
     document.querySelector('.navbar').classList.toggle('active');
 });
 
+/*MESGAGE*******************************************/
+document.addEventListener("DOMContentLoaded", () => {
+    const messagesContainers = document.querySelectorAll('.messages');
+
+    if (messagesContainers.length > 0) {
+        console.log("Messages containers found.");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    console.log("Messages container is in view. Adding animation.");
+                    entry.target.classList.add('animate');
+                } else {
+                    console.log("Messages container is out of view. Removing animation.");
+                    entry.target.classList.remove('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        messagesContainers.forEach(container => {
+            observer.observe(container);
+        });
+    } else {
+        console.error("No messages containers found.");
+    }
+});
+
+

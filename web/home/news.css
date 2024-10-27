@@ -245,6 +245,24 @@ html,body{
     text-align: center;
     color: rgba(255, 255, 255, 1); 
   }
+  /* Change color of navigation buttons */
+/* Ensure the left and right buttons have the desired color */
+.swiper-button-next, 
+.swiper-button-prev {
+  color: black !important; /* Use !important to override Swiper's default styles */
+}
+
+/* Hover effect for the buttons */
+.swiper-button-next:hover, 
+.swiper-button-prev:hover {
+  color: blue !important; /* Slightly lighter orange on hover */
+}
+
+
+.swiper-pagination-bullet-active {
+  background-color: black !important; /* Active bullet in orange */
+}
+
   /************************************************/
   @media (max-width: 768px){
     .news-title{
@@ -257,6 +275,10 @@ html,body{
           flex-direction: column;
             align-items: center;
             gap: 10px;
+        }
+        .swiper-button-next, 
+        .swiper-button-prev {
+          display: none !important;
         }
        
   }
