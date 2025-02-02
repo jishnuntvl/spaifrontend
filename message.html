@@ -5,8 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="web/home/message.css">
     <title>Document</title>
+    <style>
+      /* Loading screen styles */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #000428, #004e92); /* Dark gradient background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Logo container */
+.logo-container12 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo */
+.logo12 {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the logo fits well */
+    animation: pulse 1.5s infinite ease-in-out; /* Glow and scaling animation */
+}
+
+/* Glowing ring effect */
+.glow-ring {
+    position: absolute;
+    width: 100px;
+    height: 90%;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Glowing border */
+    border-radius: 50%;
+    animation: glow 2s infinite ease-in-out;
+    pointer-events: none;
+}
+
+/* Pulsating glow animation */
+@keyframes glow {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+/* Logo pulse animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Slight zoom */
+    }
+}
+
+    </style>
 </head>
 <body>
+  <div id="loading-screen">
+    <div class="logo-container12">
+        <img class="logo12" src="images/SPAI_LOGO-removebg.png" alt="Logo"> <!-- Replace with your logo's path -->
+        <div class="glow-ring"></div> <!-- Animated glow ring -->
+    </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const loader = document.getElementById('loading-screen');
+
+      // Minimum duration for the loader (2 seconds)
+      const minimumDuration = 2000;
+      const startTime = Date.now();
+
+      window.addEventListener("load", function () {
+          const elapsedTime = Date.now() - startTime;
+          const remainingTime = Math.max(minimumDuration - elapsedTime, 0);
+
+          // Ensure the loader stays for at least 2 seconds
+          setTimeout(() => {
+              if (loader) {
+                  loader.style.opacity = '0'; // Fade out
+                  setTimeout(() => {
+                      loader.style.display = 'none'; // Remove from DOM
+                  }, 500); // Match the CSS transition duration
+              }
+          }, remainingTime);
+      });
+  });
+
+
+</script>
+
     <!-- partial:index.partial.html -->
     <!-- inspired by https://adobe.ly/39tvYSM -->
     <h1>Quote Cards</h1>

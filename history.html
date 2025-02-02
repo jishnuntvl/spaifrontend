@@ -8,8 +8,364 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- <style>
+        /* Loading screen styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Semi-transparent background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 9999;
+        }
+
+        /* Bouncing ball styles */
+        .bouncing-ball {
+            width: 50px;
+            height: 50px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Soccer_ball.svg') no-repeat center/contain;
+            border-radius: 50%;
+            animation: bounce 0.8s infinite ease-in-out;
+            z-index: 100;
+        }
+
+        /* Ground shadow */
+        .ground-shadow {
+            width: 50px;
+            height: 10px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            position: relative;
+            top: -10px;
+            animation: shadow-scale 0.8s infinite ease-in-out;
+        }
+
+        /* Bouncing ball animation */
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                /* Resting on the ground */
+            }
+
+            50% {
+                transform: translateY(-30px);
+                /* Slight lift off the ground */
+            }
+        }
+
+        /* Ground shadow animation */
+        @keyframes shadow-scale {
+
+            0%,
+            100% {
+                transform: scaleX(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scaleX(1.5);
+                /* Stretch shadow when ball lifts */
+                opacity: 0.3;
+            }
+        }
+    </style> -->
+    <!-- <style>
+        /* Loading screen styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 9999;
+        }
+    
+        /* Bouncing ball styles */
+        .bouncing-ball {
+            width: 50px;
+            height: 50px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Soccer_ball.svg') no-repeat center/contain;
+            border-radius: 50%;
+            animation: bounce 0.8s infinite ease-in-out, rotate 0.8s infinite linear;
+            z-index: 100;
+        }
+    
+        /* Ground shadow */
+        .ground-shadow {
+            width: 50px;
+            height: 10px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            position: relative;
+            top: -10px;
+            animation: shadow-scale 0.8s infinite ease-in-out;
+        }
+    
+        /* Bouncing ball animation */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0); /* Resting on the ground */
+            }
+            50% {
+                transform: translateY(-30px); /* Lift off the ground */
+            }
+        }
+    
+        /* Ball rotation animation */
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    
+        /* Ground shadow animation */
+        @keyframes shadow-scale {
+            0%, 100% {
+                transform: scaleX(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scaleX(1.5); /* Stretch shadow when ball lifts */
+                opacity: 0.3;
+            }
+        }
+    </style> -->
+    <!-- <style>
+        /* Loading screen styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 9999;
+        }
+    
+        /* Bouncing ball styles */
+        .bouncing-ball {
+            width: 50px;
+            height: 50px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Soccer_ball.svg') no-repeat center/contain;
+            border-radius: 50%;
+            animation:bounce 0.8s infinite ease-in-out,rotate 0.8s infinite linear;
+            z-index: 100;
+        }
+    
+        /* Ground shadow */
+        .ground-shadow {
+            width: 50px;
+            height: 10px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            position: relative;
+            top: -10px;
+            animation: shadow-scale 0.8s infinite ease-in-out;
+        }
+    
+        /* Bouncing ball animation */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0); /* Resting on the ground */
+            }
+            50% {
+                transform: translateY(-30px); /* Lift off the ground */
+            }
+        }
+    
+        /* Ball rotation animation */
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg); /* Start rotating */
+            }
+            to {
+                transform: rotate(360deg); /* Complete one full rotation */
+            }
+        }
+    
+        /* Ground shadow animation */
+        @keyframes shadow-scale {
+            0%, 100% {
+                transform: scaleX(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scaleX(1.5); /* Stretch shadow when ball lifts */
+                opacity: 0.3;
+            }
+        }
+    </style> -->
+    <style>
+        /* Loading screen styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 9999;
+        }
+    
+        /* Bouncing ball styles */
+        .bouncing-ball {
+            width: 50px;
+            height: 50px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Soccer_ball.svg') no-repeat center/contain;
+            /* background: url('/images/vollyball.svg') no-repeat center/contain; */
+            border-radius: 50%;
+            animation: bounce-and-rotate 0.8s infinite ease-in-out;
+            z-index: 100;
+        }
+    
+        /* Ground shadow */
+        .ground-shadow {
+            width: 50px;
+            height: 10px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            position: relative;
+            top: -10px;
+            animation: shadow-scale 0.8s infinite ease-in-out;
+        }
+    
+        /* Combined Bouncing and Rotation Animation */
+        @keyframes bounce-and-rotate {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg); /* Resting on the ground, no rotation */
+            }
+            5%{
+                transform: translateY(-3px) rotate(18deg);
+            }
+            10%{
+                transform: translateY(-6px) rotate(36deg);
+            }
+            15%{
+                transform: translateY(-9px) rotate(54deg);
+            }
+            20%{
+                transform: translateY(-12px) rotate(72deg);
+            }
+            25%{
+                transform: translateY(-15px) rotate(90deg);
+            }
+            30% {
+                transform: translateY(-18px) rotate(108deg); /* Lift up a bit, rotate 90 degrees */
+            }
+            35%{
+                transform: translateY(-21px) rotate(126deg);
+            }
+            40% {
+                transform: translateY(-24px) rotate(144deg); /* Lift up a bit, rotate 90 degrees */
+            }
+            45%{
+                transform: translateY(-27px) rotate(162deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(180deg); /* Higher bounce, rotate 180 degrees */
+            }
+            55%{
+                transform: translateY(-27px) rotate(198deg);
+            }
+            60% {
+                transform: translateY(-24px) rotate(216deg); /* Higher bounce, rotate 180 degrees */
+            }
+            65%{
+                transform: translateY(-21px) rotate(234deg);
+            }
+            70% {
+                transform: translateY(-18px) rotate(252deg); /* Bounce down a bit, rotate 270 degrees */
+            }
+            75%{
+                transform: translateY(-15px) rotate(270deg);
+            }
+            80% {
+                transform: translateY(-12px) rotate(288deg); /* Bounce down a bit, rotate 270 degrees */
+            }
+            85%{
+                transform: translateY(-9px) rotate(306deg);
+            }
+            90% {
+                transform: translateY(-6px) rotate(324deg); /* Bounce down a bit, rotate 270 degrees */
+            }
+            95%{
+                transform: translateY(-3px) rotate(342deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg); /* Rest on the ground, complete 1 full rotation */
+            }
+        }
+    
+        /* Ground shadow animation */
+        @keyframes shadow-scale {
+            0%, 100% {
+                transform: scaleX(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scaleX(1.5); /* Stretch shadow when ball lifts */
+                opacity: 0.3;
+            }
+        }
+    </style>
+    
+    
 </head>
 <body>
+    <div id="loading-screen">
+        <div class="bouncing-ball"></div>
+        <div class="ground-shadow"></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loader = document.getElementById('loading-screen');
+
+            // Minimum duration for the loader (2 seconds)
+            const minimumDuration = 2000;
+            const startTime = Date.now();
+
+            window.addEventListener("load", function () {
+                const elapsedTime = Date.now() - startTime;
+                const remainingTime = Math.max(minimumDuration - elapsedTime, 0);
+
+                // Ensure the loader stays for at least 2 seconds
+                setTimeout(() => {
+                    if (loader) {
+                        loader.style.opacity = '0'; // Fade out
+                        setTimeout(() => {
+                            loader.style.display = 'none'; // Remove from DOM
+                        }, 500); // Match the CSS transition duration
+                    }
+                }, remainingTime);
+            });
+        });
+
+
+    </script>
     <header>
         <div class="top-row">
             <div style="display: flex;">

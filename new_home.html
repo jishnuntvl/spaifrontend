@@ -21,9 +21,80 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Loading screen styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Semi-transparent background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        /* Bouncing ball styles */
+        .bouncing-ball {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            /* Makes it a circle */
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        /* Bouncing animation */
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                /* Start and end at the same position */
+            }
+
+            50% {
+                transform: translateY(-100px);
+                /* Jump height */
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <div id="loading-screen">
+        <div class="bouncing-ball"></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loader = document.getElementById('loading-screen');
+
+            // Minimum duration for the loader (2 seconds)
+            const minimumDuration = 2000;
+            const startTime = Date.now();
+
+            window.addEventListener("load", function () {
+                const elapsedTime = Date.now() - startTime;
+                const remainingTime = Math.max(minimumDuration - elapsedTime, 0);
+
+                // Ensure the loader stays for at least 2 seconds
+                setTimeout(() => {
+                    if (loader) {
+                        loader.style.opacity = '0'; // Fade out
+                        setTimeout(() => {
+                            loader.style.display = 'none'; // Remove from DOM
+                        }, 500); // Match the CSS transition duration
+                    }
+                }, remainingTime);
+            });
+        });
+
+
+    </script>
     <header>
         <div class="top-row">
             <div style="display: flex;">
@@ -44,22 +115,186 @@
 
         </div>
         <hr class="hrline">
+
         <nav>
             <ul class="navbar">
-                <li><a href="history.html">About</a></li>
-                <li><a href="#">Members & Membership</a></li>
-                <li><a href="#">Publications</a></li>
                 <li class="dropdown">
-                    <a href="news.html">News & Events</a>
+                    <a href="#">ABOUT</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Event 1</a></li>
-                        <li><a href="#">Events 2</a></li>
-                        <li><a href="#">Event 3</a></li>
+                        <li><a href="{% url 'about_page' %}?page=about_spai">About Spai</a></li>
+                        <li><a href="{% url 'about_page' %}?page=mission">Our mission</a></li>
+                        <li><a href="{% url 'about_page' %}?page=history">History</a></li>
+                        <li class="side-down">
+                            <a class="nav-arrow" href="#">
+                                <div style="display: flex;justify-content: space-between;">Leadership<img
+                                        src="{% static 'image/triangle.svg' %}" alt=""></div>
+                            </a>
+                            <ul class="dropdown-menu side">
+                                <li><a href="{% url 'about_page' %}?page=president">President</a></li>
+                                <li><a href="{% url 'about_page' %}?page=secretary">Secretary</a></li>
+                                <li><a href="#">Regional secres</a></li>
+                                <li><a href="{% url 'about_page' %}?page=patron">Patrons</a></li>
+                                <li><a href="{% url 'about_page' %}?page=pre_committee">Previous year council</a></li>
+                                <li><a href="{% url 'about_page' %}?page=committee">Committees</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'about_page' %}?page=message_from_president">Message from the President</a>
+                        </li>
+                        <li><a href="{% url 'about_page' %}?page=message_from_secretary">Message from the Secretary</a>
+                        </li>
                     </ul>
                 </li>
-                <li><a href="#">Academics</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li>
+                <li class="dropdown">
+                    <a href="#">NEWS & EVENTS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'news' %}?tab=upcoming">Upcoming Events</a></li>
+                        <li><a href="{% url 'news' %}?tab=post">Events Organized</a></li>
+                        <li><a href="{% url 'news' %}">Major Highlights</a></li>
+                        <li><a href="{% url 'gallery_list' %}">Gallery</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="{% url 'members' %}">MEMBERSHIP</a>
+                    <ul class="dropdown-menu">
+                        <li class="side-down">
+                            <a class="nav-arrow" href="#">
+                                <div style="display: flex;justify-content: space-between;">Join SPAI<img
+                                        src="{% static 'image/triangle.svg' %}" alt=""></div>
+                            </a>
+                            <ul class="dropdown-menu side">
+                                <li><a href="#">About Membership Privilege</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Executive Members</a></li>
+                        <li><a href="{% url 'life_members_get' %}">Life Members</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">PUBLICATIONS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'publications' %}?page=about_spai_journal">About SPAI Journal</a></li>
+                        <li><a href="#">Call for manuscripts</a></li>
+                        <li class="side-down">
+                            <a class="nav-arrow" href="#">
+                                <div style="display: flex;justify-content: space-between;">Editorial Board<img
+                                        src="{% static 'image/triangle.svg' %}" alt=""></div>
+                            </a>
+                            <ul class="dropdown-menu side">
+                                <li><a href="#">Editorial Board Members</a></li>
+                                <li><a href="#">Join as Editor</a></li>
+                                <li><a href="#">Join as Reviewer</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Journal Archives</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">ACADEMIC & RESOURCES</a>
+                    <ul class="dropdown-menu">
+                        <li class="side-down">
+                            <a class="nav-arrow" href="#">
+                                <div style="display: flex;justify-content: space-between;">Academic Program<img
+                                        src="{% static 'image/triangle.svg' %}" alt=""></div>
+                            </a>
+                            <ul class="dropdown-menu side">
+                                <li><a href="#">Certification Program in SP</a></li>
+                                <!-- <li><a href="#">A</a></li>
+                  <li><a href="#">A</a></li>
+                  <li><a href="#">A</a></li> -->
+                            </ul>
+                        </li>
+                        <li><a href="#">MOU Collaboration</a></li>
+                        <li class="side-down" style="height: 45px;">
+                            <a class="nav-arrow" href="#">
+                                <div style="display: flex;justify-content: space-between;">Workshop/Seminars/
+                                    Conferences<img src="{% static 'image/triangle.svg' %}" alt=""></div>
+                            </a>
+                            <ul class="dropdown-menu side">
+                                <li class="side-downB">
+                                    <a class="nav-arrow" href="#">
+                                        <div style="display: flex;justify-content: space-between;">Annual Conference<img
+                                                src="{% static 'image/triangle.svg' %}" alt=""></div>
+                                    </a>
+                                    <ul class="dropdown-menu sideB">
+                                        <li><a href="#">Upcomming Annual</a></li>
+                                        <li><a href="#">Past Annual</a></li>
+                                        <li><a href="#">Annual Conf Archives</a></li>
+                                    </ul>
+                                </li>
+                                <li class="side-downB">
+                                    <a class="nav-arrow" href="#">
+                                        <div style="display: flex;justify-content: space-between;">National Workshops or
+                                            Seminars<img src="{% static 'image/triangle.svg' %}" alt=""></div>
+                                    </a>
+                                    <ul class="dropdown-menu sideB">
+                                        <li><a href="#">Upcomming</a></li>
+                                        <li><a href="#">Completed</a></li>
+                                    </ul>
+                                </li>
+                                <li class="side-downB" style="height: 45px;">
+                                    <a class="nav-arrow" href="#">
+                                        <div style="display: flex;justify-content: space-between;">State Regional
+                                            Workshops or Seminars<img src="{% static 'image/triangle.svg' %}" alt="">
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu sideB">
+                                        <li><a href="#">Upcomming</a></li>
+                                        <li><a href="#">Completed</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="side-down">
+                            <a class="nav-arrow" href="#">
+                                <div style="display: flex;justify-content: space-between;">Online Lectures /Webinars<img
+                                        src="{% static 'image/triangle.svg' %}" alt=""></div>
+                            </a>
+                            <ul class="dropdown-menu side">
+                                <li><a href="#">Upcomming</a></li>
+                                <li><a href="#">Completed</a></li>
+                            </ul>
+                        </li>
+                        <li class="side-down">
+                            <a class="nav-arrow" href="#">
+                                <div style="display: flex;justify-content: space-between;">Internship<img
+                                        src="{% static 'image/triangle.svg' %}" alt=""></div>
+                            </a>
+                            <ul class="dropdown-menu side">
+                                <li><a href="{% url 'academic' %}?page=about_internship">About SPAI Internship</a></li>
+                                <li><a href="#">SPAI Mentors</a></li>
+                                <li><a href="{% url 'internship_page' %}">Join Internship</a></li>
+                                <li><a href="#">Internship Testimonials</a></li>
+                            </ul>
+                        </li>
+                        <li class="side-down">
+                            <a class="nav-arrow" href="#">
+                                <div style="display: flex;justify-content: space-between;">Awards<img
+                                        src="{% static 'image/triangle.svg' %}" alt=""></div>
+                            </a>
+                            <ul class="dropdown-menu side">
+                                <li><a href="#">SPAI Awards</a></li>
+                                <li><a href="#">Best Research Award</a></li>
+                                <li><a href="#">Best Paper Presenter Award</a></li>
+                                <li><a href="#">Best Poster Presentation Award</a></li>
+                                <li><a href="#">Best Publications</a></li>
+                                <li><a href="#">Student Research Award</a></li>
+                            </ul>
+                        </li>
+                        <li class="side-down">
+                            <a class="nav-arrow" href="#">
+                                <div style="display: flex;justify-content: space-between;">Grants<img
+                                        src="{% static 'image/triangle.svg' %}" alt=""></div>
+                            </a>
+                            <ul class="dropdown-menu side">
+                                <li><a href="#">SPAI Research Grant</a></li>
+                                <li><a href="#">Call for Grants</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Latest Updates in Sports Psychology</a></li>
+                    </ul>
+                </li>
+                <li class="search-li">
                     <div class="search-wrapper">
                         <input type="text" class="search-input" placeholder="search here...">
                         <button class="search-button">
@@ -67,9 +302,19 @@
                         </button>
                     </div>
                 </li>
-                <li>
-                    <div class="login-button1">Member Login</div>
-                </li>
+                <!-- <li>
+        {% if request.user.is_authenticated %}
+        <div></div>
+        {% else %}
+          <div class="login-button1">
+             
+              
+            
+              <a style="text-decoration: none; color: white;" href="{% url 'login_page' %}">Member Login</a>
+            
+          </div>
+          {% endif %}
+      </li>                 -->
             </ul>
         </nav>
     </header>
@@ -127,6 +372,7 @@
         </div>
         <div class="grady"></div>
     </div>
+    
     <div class="math">
         <div class="math-text">
             <div style="display: flex;gap: 40px;">
@@ -424,38 +670,45 @@
                     <img src="images/PRESIDENT.png" alt="">
                 </div>
                 <div class="msg3">
-                <i>
-                    <div class="content">Greetings from SPAI. <br>
-                        <p>I am excited to update you regarding the activities of Sports Psychology Association of India
-                            (SPAI). Ever since the formation of SPAI in 1985, the organisation has made its existence as
-                            per the objectives of the association. With more than 650 life members and four regional
-                            secretaries, SPAI looks forward to having a calendar of activities across the country to
-                            spread the message of SPAI and to build expertise and provide service of sports psychology
-                            to all budding sportspersons</p>
-                        <p>The SPAI annual conference brings in all applied practitioners who work across various
-                            professional fields and sports, where they share their expertise and best practices; provide
-                            professional exposure to upcoming sports psychologists, grow better job opportunities and
-                            provide networking for future directions in the practicing field.</p>
-                        <p>SPAI aims to spread awareness and knowledge and provide expert consultancy and services
-                            through its pioneering members, practitioners in the field and through academic programmes
-                            and resources through its publication unit and web resources. </p>
-                        <p>SPAI has in its future agenda to support young aspiring sports psychologist by providing
-                            internships and fellowships and awards for academic and research in the field. </p>
-                        <p>With plenty of new happenings proposed by the executive council of SPAI, we would continue to
-                            advance the organisational activity and the field of practice. We look forward for
-                            collaboration from institutions and like mined associations for mutually beneficial
-                            programme and action plans. </p>
-                        <p>Look forward for future updates on sports psychology and let us work together for better
-                            prosperity and success in the field</p>
+                    <i>
+                        <div class="content">Greetings from SPAI. <br>
+                            <p>I am excited to update you regarding the activities of Sports Psychology Association of
+                                India
+                                (SPAI). Ever since the formation of SPAI in 1985, the organisation has made its
+                                existence as
+                                per the objectives of the association. With more than 650 life members and four regional
+                                secretaries, SPAI looks forward to having a calendar of activities across the country to
+                                spread the message of SPAI and to build expertise and provide service of sports
+                                psychology
+                                to all budding sportspersons</p>
+                            <p>The SPAI annual conference brings in all applied practitioners who work across various
+                                professional fields and sports, where they share their expertise and best practices;
+                                provide
+                                professional exposure to upcoming sports psychologists, grow better job opportunities
+                                and
+                                provide networking for future directions in the practicing field.</p>
+                            <p>SPAI aims to spread awareness and knowledge and provide expert consultancy and services
+                                through its pioneering members, practitioners in the field and through academic
+                                programmes
+                                and resources through its publication unit and web resources. </p>
+                            <p>SPAI has in its future agenda to support young aspiring sports psychologist by providing
+                                internships and fellowships and awards for academic and research in the field. </p>
+                            <p>With plenty of new happenings proposed by the executive council of SPAI, we would
+                                continue to
+                                advance the organisational activity and the field of practice. We look forward for
+                                collaboration from institutions and like mined associations for mutually beneficial
+                                programme and action plans. </p>
+                            <p>Look forward for future updates on sports psychology and let us work together for better
+                                prosperity and success in the field</p>
+                        </div>
+                    </i>
+                    <div style="width: 100%;display: flex;justify-content: end;">
+                        <div class='author'>Dr Anil Kharwande<br>
+                            President <br>
+                            Sports Psychology Association of India
+                        </div>
                     </div>
-                </i>
-                <div style="width: 100%;display: flex;justify-content: end;">
-                    <div class='author'>Dr Anil Kharwande<br>
-                        President <br>
-                        Sports Psychology Association of India
-                    </div>
-                </div>
-                
+
                 </div>
             </div>
         </blockquote>

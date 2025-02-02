@@ -10,8 +10,114 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Loading screen styles */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Logo container */
+.logo-container12 {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+/* Logo */
+.logo12 {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the logo fits well */
+    animation: scale 2s infinite ease-in-out; 
+    
+}
+
+/* Wave effect */
+.wave {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white wave */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripple 2s infinite ease-out;
+    pointer-events: none;
+}
+
+.wave:nth-child(2) {
+    animation-delay: 1s; /* Staggered wave animation */
+}
+
+/* Scaling logo animation */
+@keyframes scale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Slight zoom in */
+    }
+}
+
+/* Ripple animation for waves */
+@keyframes ripple {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+
+    </style>
 </head>
 <body>
+    <div id="loading-screen">
+        <div class="logo-container12">
+            <img src="images/SPAI_LOGO-removebg.png" alt="Logo" class="logo12">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loader = document.getElementById('loading-screen');
+
+            // Minimum duration for the loader (2 seconds)
+            const minimumDuration = 2000;
+            const startTime = Date.now();
+
+            window.addEventListener("load", function () {
+                const elapsedTime = Date.now() - startTime;
+                const remainingTime = Math.max(minimumDuration - elapsedTime, 0);
+
+                // Ensure the loader stays for at least 2 seconds
+                setTimeout(() => {
+                    if (loader) {
+                        loader.style.opacity = '0'; // Fade out
+                        setTimeout(() => {
+                            loader.style.display = 'none'; // Remove from DOM
+                        }, 500); // Match the CSS transition duration
+                    }
+                }, remainingTime);
+            });
+        });
+
+
+    </script>
     <header>
         <div class="top-row">
             <div style="display: flex;">
@@ -186,7 +292,7 @@
     <footer>
         <div class="footer-row">
             <div style="display: flex;width: 400px;">
-                <img src="images/SPAI_LOGO.jpg" alt="Company Logo" class="logo-foot">
+                <img src="images/SPAI_LOGO-removebg.png" alt="Company Logo" class="logo-foot">
                 <span class="companyfoot-name">SPORTS PSYCHOLOGY ASSOSIATION OF INDIA</span>
             </div>
             <div style="display: flex;">

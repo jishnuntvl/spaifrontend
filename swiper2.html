@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Add SwiperJS styles -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Add SwiperJS script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+        .skill-wrapper {
+            display: flex;
+            gap: 30px;
+        }
+
+        .skill {
+            background: #85C08E;
+            padding: 13px 26px 13px 26px;
+            gap: 10px;
+            width: 524px;
+            height: 415px;
+            gap: 0px;
+            border-radius: 32px;
+            opacity: 0px;
+            position: relative;
+
+        }
+
+        .skill-content {
+            position: absolute;
+            bottom: 50px;
+            z-index: 2;
+        }
+
+        .skill-icon {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 1;
+        }
+
+        .skill-content h4 {
+            text-transform: uppercase;
+            color: #FFFFFF;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 48px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            text-indent: 0%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .skill-content h6 {
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            text-indent: 0%;
+            margin-top: 0%;
+        }
+
+        .ball-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            width: fit-content;
+            padding: 10px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="news">
+        <div class="news-title">
+            News & Events
+        </div>
+        <div class="swiper news-containers">
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="skill">
+                        <div class="skill-icon">
+                            <img src="{% static 'image/jump-bask.png' %}" alt="">
+                        </div>
+                        <div class="skill-content">
+                            <div class="ball-icon">
+                                <img src="{% static 'image/soft_ball.png' %}" alt="">
+                            </div>
+                            <h4>Skill Development</h4>
+                            <h6>Interns to apply mental training techniques, such as goal-setting, orientation, and skills
+                                which are applied in sports psychology to improve athlete performance and well-being.</h6>
+                        </div>
+    
+                    </div>
+                    
+                </div>
+                <div class="swiper-slide">
+                    <div class="skill">
+                        <div class="skill-icon">
+                            <img src="{% static 'image/jump-bask.png' %}" alt="">
+                        </div>
+                        <div class="skill-content">
+                            <div class="ball-icon">
+                                <img src="{% static 'image/soft_ball.png' %}" alt="">
+                            </div>
+                            <h4>Skill Development2</h4>
+                            <h6>Interns to apply mental training techniques, such as goal-setting, orientation, and skills
+                                which are applied in sports psychology to improve athlete performance and well-being.</h6>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="skill">
+                        <div class="skill-icon">
+                            <img src="{% static 'image/jump-bask.png' %}" alt="">
+                        </div>
+                        <div class="skill-content">
+                            <div class="ball-icon">
+                                <img src="{% static 'image/soft_ball.png' %}" alt="">
+                            </div>
+                            <h4>Skill Development2</h4>
+                            <h6>Interns to apply mental training techniques, such as goal-setting, orientation, and skills
+                                which are applied in sports psychology to improve athlete performance and well-being.</h6>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="skill">
+                        <div class="skill-icon">
+                            <img src="{% static 'image/jump-bask.png' %}" alt="">
+                        </div>
+                        <div class="skill-content">
+                            <div class="ball-icon">
+                                <img src="{% static 'image/soft_ball.png' %}" alt="">
+                            </div>
+                            <h4>Skill Development2</h4>
+                            <h6>Interns to apply mental training techniques, such as goal-setting, orientation, and skills
+                                which are applied in sports psychology to improve athlete performance and well-being.</h6>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="skill">
+                        <div class="skill-icon">
+                            <img src="{% static 'image/jump-bask.png' %}" alt="">
+                        </div>
+                        <div class="skill-content">
+                            <div class="ball-icon">
+                                <img src="{% static 'image/soft_ball.png' %}" alt="">
+                            </div>
+                            <h4>Skill Development2</h4>
+                            <h6>Interns to apply mental training techniques, such as goal-setting, orientation, and skills
+                                which are applied in sports psychology to improve athlete performance and well-being.</h6>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+
+
+
+        </div>
+
+    </div>
+    <script>
+        const swiper = new Swiper('.news-containers', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            
+
+            touchEventsTarget: 'container', // Ensures touch events are captured by the swiper container
+            simulateTouch: true, // Enable touch interactions
+            watchOverflow: true, // Disable when there are fewer slides than needed
+            loop: true
+        });
+
+    </script>
+
+
+</body>
+
+</html>
